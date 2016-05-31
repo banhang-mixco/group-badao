@@ -1,63 +1,33 @@
-@extends('app')
-
-@section('content')
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
-			<div class="panel panel-default">
-				<div class="panel-heading">Login</div>
-				<div class="panel-body">
-					@if (count($errors) > 0)
-						<div class="alert alert-danger">
-							<strong>Whoops!</strong> There were some problems with your input.<br><br>
-							<ul>
-								@foreach ($errors->all() as $error)
-									<li>{{ $error }}</li>
-								@endforeach
-							</ul>
-						</div>
-					@endif
-
-					<form class="form-horizontal" role="form" method="POST" action="/auth/login">
-						<input type="hidden" name="_token" value="{{ csrf_token() }}">
-
-						<div class="form-group">
-							<label class="col-md-4 control-label">E-Mail Address</label>
-							<div class="col-md-6">
-								<input type="email" class="form-control" name="email" value="{{ old('email') }}">
-							</div>
-						</div>
-
-						<div class="form-group">
-							<label class="col-md-4 control-label">Password</label>
-							<div class="col-md-6">
-								<input type="password" class="form-control" name="password">
-							</div>
-						</div>
-
-						<div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" name="remember"> Remember Me
-									</label>
-								</div>
-							</div>
-						</div>
-
-						<div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-primary" style="margin-right: 15px;">
-									Login
-								</button>
-
-								<a href="/password/email">Forgot Your Password?</a>
-							</div>
-						</div>
-					</form>
+<div class="row col-lg-4">
+		<div class="col-lg-12">
+			<h3 style="color:blue;" align="center">Đăng nhập</h3>
+			<form class="form-vertical" role='form' method="post" action="{!! route('login')!!}" >
+				<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+					<label for="email" class="control-label">Email:<span style="color:red;">(*)</span></label>
+					<input type="text" name="email" id="email" placeholder="Email" class="form-control" value="{{ Request::old('email') ?: '' }}" />
+					@if($errors->has('email'))
+						<span class="help-block">{{ $errors->first('email') }}</span>
+					@endif				
 				</div>
+				<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+					<label for="password" class="control-label">Mật khẩu:<span style="color:red;">(*)</span></label>
+					<input type="password" name="password" id="password" placeholder="Password" class="form-control"/>
+					@if($errors->has('password'))
+						<span class="help-block">{{ $errors->first('password') }}</span>
+					@endif
+				</div>
+				<div class="checkbox">
+					<label><input type="checkbox" name="remember">Ghi nhớ tôi</label>
+				</div>
+				<div class="form-group">
+					<button class="btn btn-lg btn-primary btn-block create-shop" type="submit">Đăng nhập</button> 
+				</div>
+				<input type="hidden" name="_token" value="{{ Session::token() }}" />
+			</form>
+			<div class="col-lg-12 form-group" align="center" style="color: #e98b39; font-size:14px;"> Hoặc đăng nhập bằng </div>
+			<div align="center" class="form-group col-lg-12">
+				<a href="{!! route('google') !!}"><img src="{{ url('public/images/google.jpg') }}"></a>
+				<a href="{!! route('facebook') !!}"><img src="{{ url('public/images/face.jpg') }}"></a>
 			</div>
 		</div>
 	</div>
-</div>
-@endsection

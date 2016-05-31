@@ -1,0 +1,61 @@
+/*.wrapper_header.fixed{background: #fff;position: fixed;left: 0;right: 0;top: 0;z-index: 99}*/
+/*.slides-navigation .fa{color: #e78624;font-size: 35px}*/
+.navtop{height: 29px;background: #a9cf46;position: relative;color: #fff;line-height: 29px;font-size: 15px}
+.navtop a{color: #fcd955;text-decoration: none}
+.navtop .background{display: inline-block;width: 470px;position: absolute;background: #fff;height: 29px;left: 0;top: 0}
+.navtop .background:after{content: "" ;background:url(../images/after_02.png) no-repeat;right: -35px;width: 35px;height: 30px;position: absolute}
+.navtop .mail{position: relative;padding-left: 49px;float: right}
+.navtop .mail a:hover{color: #fff}
+.navtop .mail:before{content: "";background: url(../images/icon.png) no-repeat -15px 0;width: 21px; height: 13px;position: absolute;left: 14px;top: 8px}
+.navtop .hotline{position: relative;padding-left: 28px;float: right;padding-right: 14px;border-right: 1px solid #fff;color: #fcd955}
+.navtop .hotline:before{content: "";background: url(../images/icon.png) no-repeat 0 0;width: 15px; height: 15px;position: absolute;left: 0;top: 8px}
+
+.header{height: 114px;box-shadow: 0 5px 9px -2px #eaeaea;position: relative;z-index: 99}
+.logo{margin-top: -19px;position: absolute;left: 15px}
+.header .container{padding-left: 225px;position: relative}
+.login{font-size: 15px;padding-left: 47px;position: relative;float: right;margin-right: 30px;margin-top: 12px}
+.login a,.cart:hover span:last-child{color: #e58838}
+.login:hover{cursor: pointer;}
+.login a:hover{text-decoration: none;}
+.login:before{content: "";background: url(../images/icon.png) no-repeat 0 -17px;width: 41px;height: 41px;position: absolute;left: 0;top: 3px}
+.login-info{ font-size: 15px;line-height: 47px;text-transform: uppercase}
+
+.cart{position: relative;padding-left: 50px;float: right;margin-top: 12px}
+.cart:before{content: "";background:url(../images/icon.png) no-repeat 0 -60px;width: 41px;height: 41px;position: absolute;left: 0;top: 3px }
+.cart span:first-child{font-family: 'roboto bold';font-size: 26px;color: #e58838;line-height: 47px}
+.cart span:last-child{font-size: 15px; color: #000;    vertical-align: top;margin-top: 12px;display: inline-block;}
+.slogan{float: left;font-size: 18px;color: #ec9e51;text-transform: uppercase;font-family: 'roboto regular';margin-top: 25px;letter-spacing: 6px}
+.navmenu{display: inline-block;margin-top: 22px;float: left}
+
+.navmenu ul li{position: relative;list-style: none;float: left;padding-right:40px;line-height: normal}
+.navmenu ul li:nth-child(6){border-right: 1px solid #cd741a}
+.navmenu a{color:#000;padding: 12px 0;font-size: 16px;text-shadow: 0 1px 0 #e2e2e2; }
+.navmenu ul li:hover ul{display: block}
+.navmenu ul li ul{position: absolute;z-index: 999;background: rgba(0,0,0,0.7);top: 33px;width: 200px;display: none}
+.navmenu ul li ul li{float: none;border-top: 1px solid #ddd;padding-right: 0}
+.navmenu ul li ul li a{display: block;border-bottom: 0;padding: 10px;color: #fff}
+.navmenu ul li ul li a:hover{border-bottom: 0;text-shadow: none}
+
+.navmenu a:hover,.navmenu a.active{text-decoration: none;border-bottom: 4px solid #a6ce39;color: #e58838;}
+.wrapper_search{margin-right: 5px;width: 247px;float: right;height: 30px;padding-left: 10px;padding-right: 2px;padding-top: 1px;padding-bottom: 1px; border: 1px solid #e58838;border-radius: 5px;padding-right: 40px;position: relative;margin-top: 14px}
+.wrapper_search .txtsearch{border: 0;height: 26px;outline: none;float: left;width: 100%}
+.wrapper_search input[placeholder]{
+    font-style: italic;
+    -webkit-font-style:italic;
+}
+.wrapper_search .btnseacrh,.btnseacrh_{background: #e58838;width: 30px;height: 26px;border-radius: 5px;border: 0;outline: none;position: absolute;right: 2px}
+.btnseacrh_{
+    margin-right: 0 !important;
+    display: none;
+    margin-right: 5px;
+    float: right;
+    height: 26px;
+    border-radius: 5px;
+    margin-top: 75px;
+    background: none
+
+}
+.btnseacrh_ i{text-align: center;line-height: 26px;color: #e58838;width: 100%}
+.wrapper_search .btnseacrh:before{content: "";background: url(../images/icon.png) no-repeat 0 -105px;width: 13px;height: 13px;position: absolute;left: 9px;top: 7px}
+
+
